@@ -3,6 +3,11 @@ package com.hendisantika;
 import com.hendisantika.domain.Role;
 import com.hendisantika.domain.User;
 import com.hendisantika.service.UserService;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +18,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import java.util.ArrayList;
 
 @SpringBootApplication
+@OpenAPIDefinition(info = @Info(title = "User Service Spring Doc API", version = "2.0", description = "User Service " +
+        "Information"))
+@SecurityScheme(name = "User Service", scheme = "basic", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER)
 public class SpringBootJwtDemo2Application {
 
     public static void main(String[] args) {
