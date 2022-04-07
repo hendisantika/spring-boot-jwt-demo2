@@ -7,3 +7,6 @@
 3. Replace MySQL credentials with your own.
 4. Run the application: `mvn clean spring-boot:run`
 5. Open your POSTMAN APP then import the POSTMAN Collection
+
+### Image Screen shots
+
