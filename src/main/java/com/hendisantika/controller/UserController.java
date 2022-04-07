@@ -1,5 +1,6 @@
 package com.hendisantika.controller;
 
+import com.hendisantika.domain.Role;
 import com.hendisantika.domain.User;
 import com.hendisantika.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -38,5 +39,11 @@ public class UserController {
     public ResponseEntity<User> saveUser(@RequestBody User user) {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/user/save").toUriString());
         return ResponseEntity.created(uri).body(userService.saveUser(user));
+    }
+
+    @PostMapping("/role/save")
+    public ResponseEntity<Role> saveRole(@RequestBody Role role) {
+        URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/role/save").toUriString());
+        return ResponseEntity.created(uri).body(userService.saveRole(role));
     }
 }
