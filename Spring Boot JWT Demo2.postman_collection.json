@@ -1,0 +1,180 @@
+{
+  "info": {
+    "_postman_id": "a88dff16-0c96-4425-9d4a-120027008f84",
+    "name": "Spring Boot JWT Demo2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Users",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYXJ1dG8iLCJyb2xlcyI6WyJST0xFX0FETUlOIiwiUk9MRV9TVVBFUl9BRE1JTiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjQ5MzA0MTc2fQ.b-E7pvPi3Z3rAKZRHbEv_oztbcGAufLBbEY91rPTwLM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/users",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "username",
+              "value": "naruto",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "1234",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8080/api/login",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add New User",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYXJ1dG8iLCJyb2xlcyI6WyJST0xFX0FETUlOIiwiUk9MRV9TVVBFUl9BRE1JTiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjQ5MzA0MTc2fQ.b-E7pvPi3Z3rAKZRHbEv_oztbcGAufLBbEY91rPTwLM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Uchiha Madara\",\n    \"username\": \"madara\",\n    \"password\": \"1234\",\n    \"roles\": null\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/users",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Role to User",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYXJ1dG8iLCJyb2xlcyI6WyJST0xFX0FETUlOIiwiUk9MRV9TVVBFUl9BRE1JTiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjQ5MzA0OTA3fQ.fbs2_ReLLTqFMy5HYyOYuknRXxOSQd1YN8Ypgf-HW-8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"madara\",\n    \"roleName\": \"ROLE_USER\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/role/addtouser",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "role",
+            "addtouser"
+          ]
+        },
+        "description": "Add Role to User"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Refresh Token",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYXJ1dG8iLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjQ5MzA2MTA3fQ.Nq0i0-fthkPjc306M3ZJ49z6ap9aprXYEfNu4jcIfzA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/token/refresh",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "token",
+            "refresh"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
