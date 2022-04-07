@@ -1,5 +1,6 @@
 package com.hendisantika.service;
 
+import com.hendisantika.domain.Role;
 import com.hendisantika.domain.User;
 import com.hendisantika.repository.RoleRepository;
 import com.hendisantika.repository.UserRepository;
@@ -56,5 +57,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         log.info("Saving new user {} to the database", user.getName());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepo.save(user);
+    }
+
+    @Override
+    public Role saveRole(Role role) {
+        log.info("Saving new role {} to the database", role.getName());
+        return roleRepo.save(role);
     }
 }
