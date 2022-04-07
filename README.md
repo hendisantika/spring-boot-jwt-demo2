@@ -10,3 +10,26 @@
 
 ### Image Screen shots
 
+All API Request
+
+![All API Request](img/all.png "All API Request")
+
+Get Token
+
+![Get Token](img/get_token.png "Get Token")
+
+List All Users
+
+![List All Users](img/list.png "List All Users")
+
+Add New User
+
+![Add New User](img/add.png "Add New User")
+
+Add Role to User
+
+![Add Role to User](img/add_role.png "Add Role to User")
+
+Token Expired
+
+![Token Expired](img/role.png "Token Expired")
