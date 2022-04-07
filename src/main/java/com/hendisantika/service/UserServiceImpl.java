@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -77,5 +78,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public User getUser(String username) {
         log.info("Fetching user {}", username);
         return userRepo.findByUsername(username);
+    }
+
+    @Override
+    public List<User> getUsers() {
+        log.info("Fetching all users");
+        return userRepo.findAll();
     }
 }
