@@ -18,6 +18,10 @@ Get Token
 
 ![Get Token](img/get_token.png "Get Token")
 
+Get Refresh Token
+
+![Get Refresh Token](img/refresh.png "Get Refresh Token")
+
 List All Users
 
 ![List All Users](img/list.png "List All Users")
