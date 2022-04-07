@@ -1,5 +1,7 @@
 package com.hendisantika.security;
 
+import com.hendisantika.filter.CustomAuthenticationFilter;
+import com.hendisantika.filter.CustomAuthorizationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
