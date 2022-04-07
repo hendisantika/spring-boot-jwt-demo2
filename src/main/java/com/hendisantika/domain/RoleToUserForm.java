@@ -12,7 +12,7 @@ import lombok.Data;
  * Time: 10.33
  */
 @Data
-class RoleToUserForm {
+public class RoleToUserForm {
     private String username;
     private String roleName;
 }
