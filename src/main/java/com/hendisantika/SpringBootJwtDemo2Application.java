@@ -20,7 +20,7 @@ import java.util.ArrayList;
 @SpringBootApplication
 @OpenAPIDefinition(info = @Info(title = "User Service Spring Doc API", version = "2.0", description = "User Service " +
         "Information"))
-@SecurityScheme(name = "User Service", scheme = "basic", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER)
+@SecurityScheme(name = "User Service", scheme = "bearer", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER)
 public class SpringBootJwtDemo2Application {
 
     public static void main(String[] args) {
